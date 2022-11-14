@@ -1,6 +1,7 @@
 // import { client } from "lib/api";
 import { getPostBySlug } from "lib/api";
 import Container from "components/container";
+import PostHeader from "components/post-header";
 
 // export async function getStaticProps() {
 //   const resPromise = client.get({
@@ -28,7 +29,9 @@ export default function Schedule({
 }) {
   return (
     <Container>
-      <h1>{title}</h1>
+      <article>
+        <PostHeader title={title} subtitle="Blog Article" publish={publish} />
+      </article>
     </Container>
   );
 }
